@@ -1,0 +1,109 @@
+/*
+  Katrina Goh - CSS
+*/
+
+@import 'normalize';
+@import 'fonts';
+
+/* DEFAULT VARIABLES */
+
+/* Colours */
+$var-color-pink:#FF5C57; 
+$var-color-dar-red:#7F2E2B;
+$var-color-blue:#347BB2;
+$var-color-grey:#3F3F3F;
+$var-color-light-grey:#58595B;
+$var-color-black:#000;
+$var-color-white:#FFF;
+
+
+/* Shortened code for transitions */
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+/* Shortened code for transforms */
+@mixin transform($transform...) {
+    -webkit-transform: $transform;
+    transform:         $transform;
+}
+
+/* Shortened code for the dark borders on the bottom of links */
+@mixin link-border-bottom() {
+  color:$var-color-blue;
+  border-bottom:0.15em solid rgba(153, 43, 31, 1);
+}
+
+
+
+
+/* GENERAL RULES */
+
+*, *::before, *::after { /* Apply the border-box model */
+  box-sizing:border-box;
+}
+
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  font-size:1.25em;
+  color:$var-color-black;
+  padding-bottom:0;
+  margin-top:1.3em;
+}
+
+.wrapper { /* Wrap this around content if it should max at a certain length and not reach the edges of the window */
+  max-width:76em;
+  margin:0 auto;
+  padding:0 2em;
+}
+
+img { /* All images should be at max width and shrink down if larger than the screen width */
+  max-width:100%;
+  height:auto;
+}
+
+#about-img {
+  #profile-normal {
+    display:block;
+    margin:auto;
+  }
+  
+  #profile-hover {
+    display:none;
+  }
+}
+
+#about-img:hover, #about-img:focus {
+  #profile-hover {
+    display:block;
+    margin:auto;
+  }
+  
+  #profile-normal {
+    display:none;
+  }
+}
+
+hr {
+  border:0.05em solid $var-color-grey;
+}
+
+/* Selection - make the highlighted text yellow and the background red */
+
+::-moz-selection { /* Code for Firefox */
+    color:$var-color-white;
+    background:$var-color-pink;
+}
+
+::selection {
+    color:$var-color-white; 
+    background:$var-color-pink;
+}
+
+
+figure { /* By default, remove margins on figures */
+  margin:0;
+}
+
+/* GENERAL RULES */
