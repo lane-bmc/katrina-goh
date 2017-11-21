@@ -49,11 +49,11 @@ body {
   font-size:1.25em;
   color:$var-color-black;
   padding-bottom:0;
-  margin-top:1.3em;
+  margin-top:2em;
 }
 
 .wrapper { /* Wrap this around content if it should max at a certain length and not reach the edges of the window */
-  max-width:76em;
+  max-width:80em;
   margin:0 auto;
   padding:0 2em;
 }
@@ -61,32 +61,6 @@ body {
 img { /* All images should be at max width and shrink down if larger than the screen width */
   max-width:100%;
   height:auto;
-}
-
-#about-img {
-  #profile-normal {
-    display:block;
-    margin:auto;
-  }
-  
-  #profile-hover {
-    display:none;
-  }
-}
-
-#about-img:hover, #about-img:focus {
-  #profile-hover {
-    display:block;
-    margin:auto;
-  }
-  
-  #profile-normal {
-    display:none;
-  }
-}
-
-hr {
-  border:0.05em solid $var-color-grey;
 }
 
 /* Selection - make the highlighted text yellow and the background red */
@@ -101,9 +75,187 @@ hr {
     background:$var-color-pink;
 }
 
-
 figure { /* By default, remove margins on figures */
   margin:0;
 }
 
 /* GENERAL RULES */
+
+
+
+
+
+
+/* MOBILE NAVIGATION */
+
+/* Important styles */
+#toggle {
+  position:absolute;
+  display:block;
+  right:0;
+  top:0.75em;
+  width: 1.5em;
+  height: 1.55em;
+
+  span:after,
+  span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -0.45em;
+  }
+
+  span:after{
+    top: 0.45em;
+  }
+
+  span {
+    position: relative;
+    display: block;
+  }
+
+  span,
+  span:after,
+  span:before {
+    width: 100%;
+    height: 0.15em;
+    background-color: $var-color-pink;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+  }
+
+  /* on activation */
+  &.on span {
+    background-color: transparent;
+  }
+
+  &.on span:before {
+    transform: rotate(45deg) translate(0.25em, 0.25em);
+  }
+
+  &.on span:after {
+    transform: rotate(-45deg) translate(0.35em, -0.4em);
+  }
+
+  &.on + #menu {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+
+  + div {
+    height:0;
+    transition: height 0.2s;
+    margin-bottom:0.5em;
+  }
+
+  &.on + div {
+    height:15.5em;
+    transition: height 0.2s;
+  }
+}
+
+/* menu appearance*/
+#menu {
+  opacity: 0;
+  transition: all 0.3s;
+  position: relative;
+  color: $var-color-grey;
+  margin: 0 auto;
+  text-align: center;
+
+  ul, li, li a {
+    list-style: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  li a {
+    padding: 0.25em;
+    margin-bottom:0.25em;
+    color: $var-color-light-grey;
+    text-decoration: none;
+    transition: all .2s;
+  }
+
+  li a:hover,
+  li a:focus {
+    background: $var-color-pink;
+    color: $var-color-white;
+  }
+}
+
+nav {
+
+  position:relative;
+
+  img { /* The logo image in the nav bar */
+    display:inline-block;
+    opacity:1;
+    margin-bottom:1em;
+    @include transition(opacity 0.3s ease-out);
+  }
+
+  img:hover, img:focus { /* Have the logo image become translucent on hover*/
+    opacity:0.5;
+    @include transition(opacity 0.3s ease-out);
+  }
+
+}
+
+header {
+  margin-bottom: 1.5em;
+}
+
+/* MOBILE NAVIGATION */
+
+
+
+/* TEXT ELEMENTS */
+
+/* Headings */
+
+h1 {
+  font-size:1.5em;
+  margin:0;
+  font-family: 'Lato Medium', Arial, sans-serif;
+  color:$var-color-black;
+}
+
+/* Paragraphs */
+p, ul, ol {
+  margin:0 0 1em 0;
+  font-size:0.95em;
+  line-height:1.5em;
+}
+
+/* TEXT ELEMENTS */
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+/* Header images */
+@media (max-width:34.999em) {
+  #banner-small { display:block; }
+  #banner-medium { display:none; }
+  #banner-large { display:none; }
+}
+
+@media (min-width:35em) and (max-width:56.249em) {
+  #banner-small { display:none; }
+  #banner-medium { display:block; }
+  #banner-large { display:none; }
+}
+
+@media (min-width:56.25em) {
+  #banner-small { display:none; }
+  #banner-medium { display:none; }
+  #banner-large { display:block; }
+}
+
+/* MEDIA QUERIES */

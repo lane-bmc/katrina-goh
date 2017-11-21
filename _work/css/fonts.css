@@ -9,31 +9,11 @@
 }
 
 @font-face {
-  font-family: 'LFT Etica Bold';
-  src: url('fonts/lft_etica_bold.eot'); /* IE9 Compat Modes */
-  src: url('fonts/lft_etica_bold.eot?#iefix') format('embedded-opentype'), 
-       url('fonts/lft_etica_bold.woff2') format('woff2'), 
-       url('fonts/lft_etica_bold.woff') format('woff'), 
-       url('fonts/lft_etica_bold.ttf')  format('truetype'),
-       url('fonts/lft_etica_bold.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'LFT Etica Bold Italic';
-  src: url('fonts/lft_etica_bolditalic.eot'); /* IE9 Compat Modes */
-  src: url('fonts/lft_etica_bolditalic?#iefix') format('embedded-opentype'), 
-       url('fonts/lft_etica_bolditalic.woff2') format('woff2'), 
-       url('fonts/lft_etica_bolditalic.woff') format('woff'), 
-       url('fonts/lft_etica_bolditalic.ttf')  format('truetype'),
-       url('fonts/lft_etica_bolditalic.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'LFT Etica Semibold';
-  src: url('fonts/lft_etica_semibold.eot'); /* IE9 Compat Modes */
-  src: url('fonts/lft_etica_semibold.eot?#iefix') format('embedded-opentype'), 
-       url('fonts/lft_etica_semibold.woff2') format('woff2'), 
-       url('fonts/lft_etica_semibold.woff') format('woff'), 
-       url('fonts/lft_etica_semibold.ttf')  format('truetype'),
-       url('fonts/lft_etica_semibold.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-family: 'Lato Medium';
+  src: url('fonts/lato-medium.eot'); /* IE9 Compat Modes */
+  src: url('fonts/lato-medium.eot?#iefix') format('embedded-opentype'), 
+       url('fonts/lato-medium.woff2') format('woff2'), 
+       url('fonts/lato-medium.woff') format('woff'), 
+       url('fonts/lato-medium.ttf')  format('truetype'),
+       url('fonts/lato-medium.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
