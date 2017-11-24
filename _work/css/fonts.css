@@ -9,6 +9,26 @@
 }
 
 @font-face {
+  font-family: 'Lato Italic';
+  src: url('fonts/lato-lightitalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/lato-lightitalic.eot?#iefix') format('embedded-opentype'), 
+       url('fonts/lato-lightitalic.woff2') format('woff2'), 
+       url('fonts/lato-lightitalic.woff') format('woff'), 
+       url('fonts/lato-lightitalic.ttf')  format('truetype'),
+       url('fonts/lato-lightitalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Lato Regular';
+  src: url('fonts/lato-regular.eot'); /* IE9 Compat Modes */
+  src: url('fonts/lato-regular.eot?#iefix') format('embedded-opentype'), 
+       url('fonts/lato-regular.woff2') format('woff2'), 
+       url('fonts/lato-regular.woff') format('woff'), 
+       url('fonts/lato-regular.ttf')  format('truetype'),
+       url('fonts/lato-regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
   font-family: 'Lato Medium';
   src: url('fonts/lato-medium.eot'); /* IE9 Compat Modes */
   src: url('fonts/lato-medium.eot?#iefix') format('embedded-opentype'), 
@@ -16,4 +36,34 @@
        url('fonts/lato-medium.woff') format('woff'), 
        url('fonts/lato-medium.ttf')  format('truetype'),
        url('fonts/lato-medium.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Lato Semibold Italic';
+  src: url('fonts/lato-semibolditalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/lato-semibolditalic.eot?#iefix') format('embedded-opentype'), 
+       url('fonts/lato-semibolditalic.woff2') format('woff2'), 
+       url('fonts/lato-semibolditalic.woff') format('woff'), 
+       url('fonts/lato-semibolditalic.ttf')  format('truetype'),
+       url('fonts/lato-semibolditalic.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Lato Bold';
+  src: url('fonts/lato-bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/lato-bold.eot?#iefix') format('embedded-opentype'), 
+       url('fonts/lato-bold.woff2') format('woff2'), 
+       url('fonts/lato-bold.woff') format('woff'), 
+       url('fonts/lato-bold.ttf')  format('truetype'),
+       url('fonts/lato-bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Lato Bold Italic';
+  src: url('fonts/lato-bolditalic.eot'); /* IE9 Compat Modes */
+  src: url('fonts/lato-bolditalic.eot?#iefix') format('embedded-opentype'), 
+       url('fonts/lato-bolditalic.woff2') format('woff2'), 
+       url('fonts/lato-bolditalic.woff') format('woff'), 
+       url('fonts/lato-bolditalic.ttf')  format('truetype'),
+       url('fonts/lato-bolditalic.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
