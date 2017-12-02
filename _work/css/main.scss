@@ -15,6 +15,7 @@ $var-color-blue:#347BB2;
 $var-color-grey:#3F3F3F;
 $var-color-light-grey:#58595B;
 $var-color-lightest-grey:#ACAEB0;
+$var-color-even-lighter-lightest-grey:#ECEEF0;
 $var-color-black:#000;
 $var-color-white:#FFF;
 
@@ -247,12 +248,21 @@ header {
 }
 
 footer {
-  border-top: 0.05em solid $var-color-lightest-grey;
   font-size:0.8em;
+  text-align:center;
   color:$var-color-light-grey;
-  margin-top:2em;
+  margin-top:2.5em;
   padding-top:0.75em;
   margin-bottom:2.5em;
+
+  hr {
+    width:100%;
+    height:1px;
+    color: $var-color-even-lighter-lightest-grey;
+    background-color: $var-color-even-lighter-lightest-grey;
+    border:none;
+    margin-bottom:1.5em;
+  }
 }
 
 #get-in-touch {
@@ -289,9 +299,13 @@ footer {
 /* Headings */
 
 h1 {
-  font-size:1.5em;
+  font-size:1.75em;
   margin:0;
   font-family: 'Lato Medium', Arial, sans-serif;
+  color:$var-color-dark-red;
+}
+
+#press-story h1 {
   color:$var-color-black;
 }
 
@@ -306,22 +320,34 @@ h2 {
   margin-top:0;
 }
 
+p {
+  font-size:0.85em;
+  line-height:1.65em;
+}
+
 /* Paragraphs */
-p, ul, ol {
+ul, ol {
   margin:0 0 1em 0;
   font-size:0.95em;
   line-height:1.5em;
+}
+  
+p, ul, ol {
 
   strong {
     font-family: 'Lato Bold', Arial, sans-serif;
   }
 }
 
+ul {
+  padding-left:0;
+}
+
 blockquote {
 
-  margin:2em 0 2.25em;
+  margin:2em 0 0;
   padding-left:0.75em;
-  border-left:0.2em solid $var-color-dark-red;
+  border-left:0.15em solid $var-color-dark-red;
 
   p {
     font-family:'Lato Italic', Arial, sans-serif;
@@ -345,14 +371,27 @@ blockquote {
 
 /* SCHEDULE + PRESS */
 
+#upcoming-events {
+  margin-top:1em;
+}
+
 figure {
 
-  &.schedule-events, &.press-story {
+  &.schedule-events {
     margin-top:2em;
     margin-bottom:2em;
 
     &:first-of-type {
       margin-top:0.75em;
+    }
+  }
+
+  &.press-preview {
+    margin-top:2em;
+    margin-bottom:2em;
+
+    &:first-of-type {
+      margin-top:0;
     }
   }
 
@@ -362,13 +401,39 @@ figure {
   }
 }
 
-.press-story-timestamp {
+.press-preview-timestamp {
   font-size:0.65em;
+  margin-top:0.1em;
+  margin-bottom:0;
   font-family:'Lato Bold', Arial, sans-serif;
   color:$var-color-lightest-grey;
 }
 
-/* SCHEDULE */
+/* SCHEDULE + PRESS */
+
+
+
+
+
+
+
+/* PRESS STORIES */
+
+.wrapper-press-story {
+  max-width:50em;
+  margin:0 auto;
+  padding:0 2em;
+}
+
+.press-story-timestamp {
+  font-size:0.8em;
+  margin-top:0;
+  margin-bottom:1em;
+  font-family:'Lato Bold', Arial, sans-serif;
+  color:$var-color-lightest-grey;
+}
+
+/* PRESS STORIES */
 
 
 
@@ -380,8 +445,8 @@ figure {
 
 #media {
 
-  h2 {
-    margin-bottom:1.5em;
+  #videos {
+    margin-top:1em;
   }
 
   section:not(:last-of-type) {
@@ -392,12 +457,75 @@ figure {
   #photos, #videos, #audio {
 
     .container [class*='col-'] {
-      margin:0.15em auto;
+
+      &:not(:first-of-type) {
+        margin:0.15em auto;
+      }
+
+      &:first-of-type {
+        margin:1em auto 0.15em;
+      }
     }
   }
 }
 
 /* MEDIA */
+
+
+
+
+
+
+/* REPERTOIRE */
+
+table {
+  margin-top:1em;
+  width:100%;
+  font-size:0.85em;
+
+  .opera-composer, .oratorio-composer, .musical-composer {
+    font-family:'Lato Semibold', Arial, sans-serif;
+    width:100%;
+    display:block;
+    margin-top:0.75em;
+  }
+
+  .opera-name, .opera-role, .oratorio-name, .musical-name, .musical-role {
+    width:100%;
+    display:block;
+  }
+
+  .opera-name, .oratorio-name, .musical-name {
+    font-family:'Lato Italic', Arial, sans-serif;
+  }
+
+  tr:not(:last-of-type) {
+    border-bottom:0.05em solid $var-color-even-lighter-lightest-grey;
+
+    .opera-role, .oratorio-name, .musical-name {
+      margin-bottom:0.75em;
+    }
+  }
+}
+
+#opera, #oratorio {
+  margin-bottom:2em;
+  border-bottom:0.05em solid $var-color-lightest-grey;
+  padding-bottom:2em;
+}
+
+#cv {
+
+  margin:2em 0 2.25em;
+  padding-left:0.75em;
+  border-left:0.15em solid $var-color-dark-red;
+
+  p em{
+    font-family:'Lato Italic', Arial, sans-serif;
+  }
+}
+
+/* REPERTOIRE */
 
 
 
@@ -414,7 +542,7 @@ figure {
   border:0.1em solid $var-color-black;
   background:$var-color-white;
   margin:0 0 1em 0;
-  padding:0.15em;
+  padding:0.35em 0.4em;
   font-size:0.85em;
 
   &:focus {
@@ -424,6 +552,9 @@ figure {
 
 #contact-form textarea {
   max-width:100%;
+  min-width:100%;
+  height:7.5em;
+  min-height:7.5em;
 }
 
 #contact-form span {
@@ -607,11 +738,73 @@ a {
     }
   }
 
-  blockquote {
+  blockquote, #cv {
     margin-top:0;
   }
 
+  #media {
+
+    h2 {
+      margin-bottom:1.45em;
+    }
+
+    #audio, #photos, #videos {
+
+      .container [class*='col-']:first-of-type {
+        margin:0.15em auto;
+      }
+    }
+  }
+
+  #repertoire #opera h2 {
+    margin-top:0;
+  }
+
+  h2 {
+    font-size:1.25em;
+  }
+
+  table {
+      display:table;
+
+      .opera-composer, .musical-composer {
+        width:25%;
+        display:table-cell;
+      }
+
+      .opera-name, .musical-name {
+        width:45%;
+        display:table-cell;
+      }
+
+      .opera-role, .musical-role {
+        width:30%;
+        display:table-cell;
+      }
+
+      .oratorio-composer {
+        width:25%;
+        display:table-cell;
+      }
+
+      .oratorio-name {
+        width:75%;
+        display:table-cell;
+      }
+
+      td {
+        height:2em;
+      }
+    }
+
+    .schedule-events p {
+      margin-top:0;
+    }
+
 }
+
+
+
 
 
 @media (min-width:47.5em) {
@@ -626,6 +819,10 @@ a {
 
   .col-1of2 {
     width:50%;
+  }
+
+  .col-4of5 {
+    width:80%;
   }
 
   .container.wide { /* Regular grids used for layout */
@@ -647,6 +844,94 @@ a {
 
   .col-2of3-lg {
     width:66.66%;
+  }
+
+  .col-1of2-lg {
+    width:50%;
+  }
+
+  h1 {
+    font-size:2.75em;
+    margin:0 0 0.75em;
+    font-family: 'Lato Hairline', Arial, sans-serif;
+    color:$var-color-dark-red;
+    text-transform:uppercase;
+    padding-top:0.5em;
+  }
+
+  figure.schedule-events:first-of-type {
+    margin-top:0;
+  }
+
+
+
+  #press-story .press-story-timestamp {
+    margin-top:0;
+    margin-bottom:1em;
+  }
+
+  #media {
+
+    h2 {
+      margin-bottom:0.5em;
+    }
+  }
+
+  #press-story {
+
+    h1 {
+      font-family: 'Lato Regular', Arial, sans-serif;
+      color:$var-color-black;
+      margin-bottom:0;
+      text-transform:none;
+    }
+
+    img {
+      margin-bottom:2.25em;
+    }
+  }
+
+  h2 {
+    font-size:1.65em;
+    margin:1.5em 0 0;
+    font-family: 'Lato Regular', Arial, sans-serif;
+    color:$var-color-black;
+  }
+
+  #press h2 {
+    margin-top:0;
+  }
+
+  /* Paragraphs */
+  p, ul, ol {
+    margin:0 0 1em 0;
+    font-size:0.95em;
+    line-height:1.5em;
+
+    strong {
+      font-family: 'Lato Bold', Arial, sans-serif;
+    }
+  }
+
+  blockquote {
+
+    margin:0 0 2.25em;
+    padding-left:0.75em;
+    border-left:0.15em solid $var-color-dark-red;
+
+    p {
+      font-family:'Lato Italic', Arial, sans-serif;
+      font-size:1.2em;
+    }
+
+    cite {
+      font-family:'Lato Bold Italic', Arial, sans-serif;
+      font-size:0.95em;
+    }
+  }
+
+  #get-in-touch hr {
+    margin-top:0;
   }
 }
 

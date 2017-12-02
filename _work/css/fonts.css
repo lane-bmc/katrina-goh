@@ -1,4 +1,24 @@
 @font-face {
+  font-family: 'Lato Hairline';
+  src: url('fonts/lato-hairline.eot'); /* IE9 Compat Modes */
+  src: url('fonts/lato-hairline.eot?#iefix') format('embedded-opentype'), 
+       url('fonts/lato-hairline.woff2') format('woff2'), 
+       url('fonts/lato-hairline.woff') format('woff'), 
+       url('fonts/lato-hairline.ttf')  format('truetype'),
+       url('fonts/lato-hairline.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Lato Thin';
+  src: url('fonts/lato-thin.eot'); /* IE9 Compat Modes */
+  src: url('fonts/lato-thin.eot?#iefix') format('embedded-opentype'), 
+       url('fonts/lato-thin.woff2') format('woff2'), 
+       url('fonts/lato-thin.woff') format('woff'), 
+       url('fonts/lato-thin.ttf')  format('truetype'),
+       url('fonts/lato-thin.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
   font-family: 'Lato';
   src: url('fonts/lato-light.eot'); /* IE9 Compat Modes */
   src: url('fonts/lato-light.eot?#iefix') format('embedded-opentype'), 
